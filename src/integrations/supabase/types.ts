@@ -14,6 +14,195 @@ export type Database = {
   }
   public: {
     Tables: {
+      candidates: {
+        Row: {
+          affidavit_link: string | null
+          age: number | null
+          bio: string | null
+          constituency: string | null
+          created_at: string
+          created_by: string | null
+          education: string | null
+          election_id: string | null
+          id: string
+          name: string
+          party_id: string | null
+          photo_url: string | null
+          profession: string | null
+          region: string
+          source_url: string | null
+          status: Database["public"]["Enums"]["verification_status"]
+          updated_at: string
+        }
+        Insert: {
+          affidavit_link?: string | null
+          age?: number | null
+          bio?: string | null
+          constituency?: string | null
+          created_at?: string
+          created_by?: string | null
+          education?: string | null
+          election_id?: string | null
+          id?: string
+          name: string
+          party_id?: string | null
+          photo_url?: string | null
+          profession?: string | null
+          region: string
+          source_url?: string | null
+          status?: Database["public"]["Enums"]["verification_status"]
+          updated_at?: string
+        }
+        Update: {
+          affidavit_link?: string | null
+          age?: number | null
+          bio?: string | null
+          constituency?: string | null
+          created_at?: string
+          created_by?: string | null
+          education?: string | null
+          election_id?: string | null
+          id?: string
+          name?: string
+          party_id?: string | null
+          photo_url?: string | null
+          profession?: string | null
+          region?: string
+          source_url?: string | null
+          status?: Database["public"]["Enums"]["verification_status"]
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "candidates_election_id_fkey"
+            columns: ["election_id"]
+            isOneToOne: false
+            referencedRelation: "elections"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "candidates_party_id_fkey"
+            columns: ["party_id"]
+            isOneToOne: false
+            referencedRelation: "parties"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      elections: {
+        Row: {
+          created_at: string
+          created_by: string | null
+          description: string | null
+          election_type: string
+          id: string
+          name: string
+          nomination_deadline: string | null
+          official_link: string | null
+          phases: number | null
+          region: string
+          result_date: string | null
+          source_url: string | null
+          status: Database["public"]["Enums"]["verification_status"]
+          updated_at: string
+          voting_end_date: string | null
+          voting_start_date: string | null
+        }
+        Insert: {
+          created_at?: string
+          created_by?: string | null
+          description?: string | null
+          election_type: string
+          id?: string
+          name: string
+          nomination_deadline?: string | null
+          official_link?: string | null
+          phases?: number | null
+          region: string
+          result_date?: string | null
+          source_url?: string | null
+          status?: Database["public"]["Enums"]["verification_status"]
+          updated_at?: string
+          voting_end_date?: string | null
+          voting_start_date?: string | null
+        }
+        Update: {
+          created_at?: string
+          created_by?: string | null
+          description?: string | null
+          election_type?: string
+          id?: string
+          name?: string
+          nomination_deadline?: string | null
+          official_link?: string | null
+          phases?: number | null
+          region?: string
+          result_date?: string | null
+          source_url?: string | null
+          status?: Database["public"]["Enums"]["verification_status"]
+          updated_at?: string
+          voting_end_date?: string | null
+          voting_start_date?: string | null
+        }
+        Relationships: []
+      }
+      parties: {
+        Row: {
+          abbreviation: string | null
+          created_at: string
+          created_by: string | null
+          description: string | null
+          founded_year: number | null
+          id: string
+          ideology: string | null
+          leader: string | null
+          manifesto_link: string | null
+          name: string
+          official_site: string | null
+          region: string
+          source_url: string | null
+          status: Database["public"]["Enums"]["verification_status"]
+          symbol_url: string | null
+          updated_at: string
+        }
+        Insert: {
+          abbreviation?: string | null
+          created_at?: string
+          created_by?: string | null
+          description?: string | null
+          founded_year?: number | null
+          id?: string
+          ideology?: string | null
+          leader?: string | null
+          manifesto_link?: string | null
+          name: string
+          official_site?: string | null
+          region: string
+          source_url?: string | null
+          status?: Database["public"]["Enums"]["verification_status"]
+          symbol_url?: string | null
+          updated_at?: string
+        }
+        Update: {
+          abbreviation?: string | null
+          created_at?: string
+          created_by?: string | null
+          description?: string | null
+          founded_year?: number | null
+          id?: string
+          ideology?: string | null
+          leader?: string | null
+          manifesto_link?: string | null
+          name?: string
+          official_site?: string | null
+          region?: string
+          source_url?: string | null
+          status?: Database["public"]["Enums"]["verification_status"]
+          symbol_url?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string
@@ -68,15 +257,43 @@ export type Database = {
         }
         Relationships: []
       }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "editor" | "user"
+      verification_status: "verified" | "pending" | "source_required"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -203,6 +420,9 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "editor", "user"],
+      verification_status: ["verified", "pending", "source_required"],
+    },
   },
 } as const
