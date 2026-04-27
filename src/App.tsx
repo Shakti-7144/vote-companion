@@ -10,6 +10,9 @@ import Timeline from "./pages/Timeline.tsx";
 import Quiz from "./pages/Quiz.tsx";
 import Chat from "./pages/Chat.tsx";
 import Auth from "./pages/Auth.tsx";
+import Elections from "./pages/Elections.tsx";
+import Parties from "./pages/Parties.tsx";
+import Candidates from "./pages/Candidates.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -27,6 +30,9 @@ const App = () => (
             <Route path="/timeline" element={<Timeline />} />
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/chat" element={<Chat />} />
+            <Route path="/elections" element={<Elections />} />
+            <Route path="/parties" element={<Parties />} />
+            <Route path="/candidates" element={<Candidates />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

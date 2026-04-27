@@ -10,6 +10,9 @@ const navItems = [
   { to: "/", label: "Home" },
   { to: "/learn", label: "Learn" },
   { to: "/timeline", label: "Timeline" },
+  { to: "/elections", label: "Elections" },
+  { to: "/parties", label: "Parties" },
+  { to: "/candidates", label: "Candidates" },
   { to: "/quiz", label: "Quiz" },
   { to: "/chat", label: "Ask AI" },
 ];
