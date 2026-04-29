@@ -1,104 +1,166 @@
-🗳️ Vote Companion
+# 🗳️ VoteSmart AI
 
-An AI-powered civic assistant platform that simplifies the election process and helps citizens make informed decisions through interactive guidance, multilingual support, and real-time insights.
+An AI-powered civic assistant platform that simplifies the election process and helps citizens make informed, confident voting decisions.
 
-🚀 Overview
+---
 
-Vote Companion is a modern web-based platform designed to increase civic participation and awareness. It provides users with step-by-step guidance on elections, candidate information, and voting procedures in a simple and accessible way.
+## 🚀 Overview
 
-The platform leverages AI, structured data, and intuitive UI/UX to bridge the gap between citizens and the electoral system.
+VoteSmart AI is a modern, interactive web platform designed to improve civic participation by making election-related information simple, accessible, and intelligent.
 
-✨ Features
-🧠 AI-powered Election Assistant
-Get instant answers about voting procedures, eligibility, and timelines
-🌐 Multilingual Support
-Accessible to users across different regions and languages
-🗂️ Election Timeline & Updates
-Stay informed about upcoming elections and key dates
-🧑‍💼 Candidates & Parties Explorer
-Browse verified information about candidates and political parties
-🔍 Smart Decision Support
-Interactive decision trees to help users choose wisely
-📊 User-friendly Dashboard
-Clean and responsive interface for seamless navigation
-🔔 Notifications & Alerts (optional/future)
-Reminders for important election events
-🛠️ Tech Stack
+It combines structured election data, intuitive UI, and AI-driven assistance to guide users through the entire voting journey.
 
-Frontend:
+---
 
-HTML5, CSS3, JavaScript
-(Optional: React / Next.js)
+## ✨ Key Features
 
-Backend:
+### 🧠 AI-powered Election Assistant
 
-Node.js / Express (if used)
+* Ask questions about voting procedures, eligibility, and timelines
+* Intelligent responses with structured guidance
 
-Database:
+### 🌍 Region-based Experience
 
-Firebase / Firestore (recommended)
+* Supports multiple regions (India, US, UK)
+* Dynamic election flows and timelines
 
-AI Integration:
+### 🗂️ Election Timeline & Insights
 
-Google Gemini API / OpenAI APIs
-📂 Project Structure
-vote-companion/
-│── public/
-│── src/
-│   ├── components/
-│   ├── pages/
-│   ├── assets/
-│   └── utils/
-│── package.json
-│── README.md
-⚙️ Installation & Setup
-Clone the repository
+* Step-by-step election process
+* Key dates and milestones
+
+### 🧑‍💼 Candidates & Parties Explorer
+
+* Browse structured information
+* Verified and organized data
+
+### 🧪 Interactive Quiz System
+
+* Test civic knowledge
+* Real-time scoring and feedback
+
+### 🎯 Smart UX/UI
+
+* Clean, responsive design
+* Accessibility-focused components
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React + TypeScript
+* Vite
+* Tailwind CSS + ShadCN UI
+
+### Backend / Services
+
+* Supabase (Authentication + Database)
+
+### Testing
+
+* Vitest
+* React Testing Library
+
+---
+
+## 🧪 Testing & Coverage
+
+This project includes **unit and UI testing** to ensure reliability.
+
+### Run tests
+
+```bash
+npm run test
+```
+
+### Run coverage
+
+```bash
+npm run test:coverage
+```
+
+### Covered areas
+
+* Quiz logic validation
+* Chat input & payload validation
+* Region data integrity
+* Navbar UI rendering
+
+---
+
+## ☁️ Google Services (Planned Integration)
+
+The platform is designed to integrate with **Google Cloud AI services**:
+
+* Gemini API (for intelligent election assistance)
+* Scalable cloud-ready architecture
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├── components/
+ ├── pages/
+ ├── lib/
+ ├── data/
+ ├── hooks/
+```
+
+---
+
+## ⚙️ Installation
+
+```bash
 git clone https://github.com/Shakti-7144/vote-companion.git
 cd vote-companion
-Install dependencies
 npm install
-Run the project
-npm start
-Open in browser
-http://localhost:3000
-🔑 Environment Variables
+npm run dev
+```
 
-Create a .env file and add:
+---
 
-GEMINI_API_KEY=your_api_key_here
-FIREBASE_CONFIG=your_config_here
-📸 Screenshots
+## 🔑 Environment Variables
 
-(Add screenshots here after deployment)
+```env
+SUPABASE_URL=your_url
+SUPABASE_KEY=your_key
+GEMINI_API_KEY=your_key (optional)
+```
 
-📈 Future Enhancements
-🏛️ Admin Dashboard for managing elections & candidates
-📍 Location-based election info
-📊 Data analytics for civic trends
-🤖 More advanced AI recommendations
-📱 Mobile app version
-🤝 Contributing
+---
 
-Contributions are welcome!
+## 📈 Future Enhancements
 
-Fork the repo
-Create a new branch
-Commit your changes
-Open a Pull Request
-📜 License
+* 🤖 Full Gemini AI integration
+* 🏛️ Admin dashboard
+* 📍 Location-based election data
+* 📊 Analytics dashboard
 
-This project is licensed under the MIT License.
+---
 
-💡 Inspiration
+## 💡 Inspiration
 
-Millions of citizens struggle with unclear election processes.
-Vote Companion aims to make democracy more accessible, transparent, and user-friendly.
+Millions of citizens avoid voting due to confusion and lack of clarity.
 
-👨‍💻 Author
+VoteSmart AI aims to make elections:
 
-Developed by Shakti Singh
-🔗 GitHub: https://github.com/Shakti-7144
+* Simple
+* Transparent
+* Accessible
 
-⭐ Support
+---
+
+## 👨‍💻 Author
+
+Shakti Singh
+🔗 https://github.com/Shakti-7144
+
+---
+
+## ⭐ Support
 
 If you like this project, give it a ⭐ on GitHub!
