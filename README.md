@@ -90,75 +90,12 @@ npm run test:coverage
 
 ---
 
-## ☁️ Google Services Integration
+## ☁️ Google Services (Planned Integration)
 
-This project meaningfully integrates Google services:
+The platform is designed to integrate with **Google Cloud AI services**:
 
-* **Google Analytics (GA4)**
-  Tracks real user interactions such as:
-
-  * AI assistant usage
-  * quiz completion
-  * engagement behavior
-
-* **Event Tracking Implementation**
-  Custom events are triggered from:
-
-  * chat interactions (`ai_chat_used`)
-  * quiz completion (`quiz_completed`)
-
-* **Google Antigravity**
-  Used during development to accelerate prototyping and build intelligent workflows
-
-* **Cloud-ready Architecture**
-  Designed to support integration with:
-
-  * Google Gemini API
-  * Google Cloud deployment
-
----
-
-## 🚀 Challenge Details
-
-### 🎯 Chosen Vertical
-
-Civic Engagement / Election Assistant
-
-### 🧠 Approach and Logic
-
-VoteSmart AI adapts dynamically based on user-selected region (India, US, UK).
-
-It provides:
-
-* structured election timelines
-* guided learning modules
-* candidate and party exploration
-* AI-powered assistance
-
-The system ensures users can navigate complex election processes in a simplified and intuitive way.
-
----
-
-### ⚙️ How the Solution Works
-
-1. User selects a region
-2. Platform loads region-specific election data
-3. User explores:
-
-   * timelines
-   * candidates
-   * learning modules
-4. AI assistant provides real-time guidance
-5. Quiz system evaluates understanding
-6. Google Analytics tracks interaction behavior
-
----
-
-### 📌 Assumptions
-
-* Election data is structured for demonstration purposes
-* Users require simplified election guidance
-* Region-based logic can be extended with real-time APIs
+* Gemini API (for intelligent election assistance)
+* Scalable cloud-ready architecture
 
 ---
 
@@ -201,7 +138,7 @@ GEMINI_API_KEY=your_key (optional)
 * 🤖 Full Gemini AI integration
 * 🏛️ Admin dashboard
 * 📍 Location-based election data
-* 📊 Advanced analytics dashboard
+* 📊 Analytics dashboard
 
 ---
 
